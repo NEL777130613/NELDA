@@ -1,0 +1,99 @@
+/* ══════════════════════════════════════════════
+   Nelda Rojas Erazo | Portafolio Profesional
+   Hoja de estilos principal
+══════════════════════════════════════════════ */
+
+/* ── Base ── */
+* { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: #FAF7F2; color: #3A3530; }
+
+/* ── Scroll reveal ── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity .7s ease, transform .7s ease; }
+.reveal-left.visible  { opacity: 1; transform: none; }
+.reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity .7s ease, transform .7s ease; }
+.reveal-right.visible { opacity: 1; transform: none; }
+
+/* ── Nav ── */
+#navbar { background: rgba(250,247,242,.92); backdrop-filter: blur(12px); }
+.nav-link { position: relative; }
+.nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1.5px;
+  background: #C9A96E; transition: width .3s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+/* ── Hero ── */
+#hero { background: linear-gradient(135deg, #F0EAE0 0%, #FAF7F2 40%, #E8F0F8 100%); }
+.hero-name { letter-spacing: -.02em; line-height: 1.05; }
+.hero-badge { background: linear-gradient(90deg, #C9A96E, #E8D5B0); }
+
+/* ── Photo placeholder ── */
+.photo-frame {
+  background: linear-gradient(145deg, #E8D5B0, #C9A96E55);
+  border: 3px solid #C9A96E;
+  box-shadow: 0 20px 60px rgba(201,169,110,.25), 0 0 0 8px rgba(201,169,110,.1);
+}
+.photo-frame img { width:100%; height:100%; object-fit:cover; border-radius:inherit; }
+
+/* ── Section titles ── */
+.section-label { letter-spacing: .18em; font-size: .7rem; text-transform: uppercase; color: #C9A96E; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; color: #2C3E6B; }
+.gold-divider { width:48px; height:2px; background: linear-gradient(90deg,#C9A96E,#E8D5B0); margin:12px auto 0; }
+
+/* ── Sobre mí card ── */
+.sobre-card { background: linear-gradient(135deg, #fff 0%, #FAF7F2 100%);
+  border: 1px solid #E8D5B0; border-radius: 1.25rem;
+  box-shadow: 0 8px 40px rgba(201,169,110,.12); }
+
+/* ── Timeline ── */
+.timeline-line { width: 2px; background: linear-gradient(to bottom, #C9A96E, #E8D5B0); }
+.timeline-dot { width:14px; height:14px; background:#C9A96E;
+  border: 3px solid #FAF7F2; box-shadow: 0 0 0 2px #C9A96E; border-radius:50%; flex-shrink:0; }
+.exp-card { background:#fff; border:1px solid #F0EAE0; border-radius:1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06); transition: transform .3s, box-shadow .3s; }
+.exp-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201,169,110,.18); }
+
+/* ── Edu card ── */
+.edu-card { background: linear-gradient(135deg, #fff, #FAF7F2);
+  border:1px solid #E8D5B0; border-radius:1rem; transition: transform .3s; }
+.edu-card:hover { transform: translateY(-3px); }
+
+/* ── Courses ── */
+.course-card { background:#fff; border-left:3px solid #C9A96E; border-radius:.75rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,.05); transition: transform .25s; }
+.course-card:hover { transform: translateX(5px); }
+
+/* ── Skills ── */
+.skill-pill { background: linear-gradient(135deg, #fff, #FAF7F2);
+  border:1px solid #E8D5B0; border-radius:2rem;
+  transition: background .25s, box-shadow .25s, transform .25s; }
+.skill-pill:hover { background: linear-gradient(135deg,#C9A96E,#A07840); color:#fff;
+  border-color:#A07840; box-shadow:0 4px 16px rgba(201,169,110,.35); transform:translateY(-2px); }
+.skill-pill:hover .skill-icon { color:#fff; }
+
+/* ── Contact ── */
+#contacto { background: linear-gradient(135deg, #2C3E6B 0%, #1e2d50 100%); }
+.contact-input { background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2);
+  color:#fff; border-radius:.75rem; transition: border .25s, background .25s; }
+.contact-input::placeholder { color:rgba(255,255,255,.45); }
+.contact-input:focus { outline:none; border-color:#C9A96E; background:rgba(255,255,255,.12); }
+
+/* ── WhatsApp float ── */
+.wa-float { background: linear-gradient(135deg,#25D366,#128C7E);
+  box-shadow: 0 6px 28px rgba(37,211,102,.4); transition: transform .25s, box-shadow .25s; }
+.wa-float:hover { transform:scale(1.1); box-shadow:0 10px 36px rgba(37,211,102,.55); }
+
+/* ── Btn primary ── */
+.btn-gold { background:linear-gradient(135deg,#C9A96E,#A07840); color:#fff;
+  border-radius:2rem; transition:transform .25s, box-shadow .25s; }
+.btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(160,120,64,.4); }
+.btn-outline { border:2px solid #C9A96E; color:#C9A96E; border-radius:2rem;
+  transition:all .25s; }
+.btn-outline:hover { background:#C9A96E; color:#fff; }
+
+/* ── Mobile menu ── */
+#mobile-menu { transition: max-height .4s ease, opacity .4s ease; }
+
+@media (prefers-reduced-motion:reduce) {
+  .reveal,.reveal-left,.reveal-right { opacity:1!important; transform:none!important; }
+}

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nelda Rojas Erazo | Portafolio Profesional</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind config (debe ir antes de styles.css) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:        '#FAF7F2',
+            parchment:    '#F0EAE0',
+            gold:         '#C9A96E',
+            'gold-light': '#E8D5B0',
+            'gold-dark':  '#A07840',
+            blush:        '#E8D5C4',
+            slate:        '#4A5568',
+            navy:         '#2C3E6B',
+            'sky-soft':   '#A8C4D8',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════ NAVBAR ════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2">
+        <span class="font-display text-xl font-semibold text-navy">Nelda</span>
+        <span class="font-display text-xl font-light text-gold">Rojas</span>
+      </a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate">
+        <a href="#sobre"       class="nav-link hover:text-gold transition-colors">Sobre mí</a>
+        <a href="#experiencia" class="nav-link hover:text-gold transition-colors">Experiencia</a>
+        <a href="#educacion"   class="nav-link hover:text-gold transition-colors">Educación</a>
+        <a href="#cursos"      class="nav-link hover:text-gold transition-colors">Cursos</a>
+        <a href="#habilidades" class="nav-link hover:text-gold transition-colors">Habilidades</a>
+        <a href="#contacto"    class="btn-gold px-5 py-2 text-sm font-medium">Contacto</a>
+      </div>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-slate focus:outline-none" aria-label="Menú">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="flex flex-col gap-1 pb-4 pt-1 text-sm font-medium text-slate">
+        <a href="#sobre"       class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Sobre mí</a>
+        <a href="#experiencia" class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Experiencia</a>
+        <a href="#educacion"   class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Educación</a>
+        <a href="#cursos"      class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Cursos</a>
+        <a href="#habilidades" class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Habilidades</a>
+        <a href="#contacto"    class="px-3 py-2 rounded-lg hover:bg-parchment hover:text-gold transition-colors" onclick="closeMobileMenu()">Contacto</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════ HERO ════════════════════════════════ -->
+<section id="hero" class="min-h-screen flex items-center pt-16 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 w-full">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+
+      <!-- Text -->
+      <div class="flex-1 text-center lg:text-left">
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 mb-5">
+          <span class="w-8 h-px bg-gold"></span>
+          <span class="section-label">Portafolio Profesional</span>
+          <span class="w-8 h-px bg-gold"></span>
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name font-display text-5xl sm:text-6xl lg:text-7xl text-navy mb-4">
+          Nelda<br/>
+          <span class="text-gold">Rojas</span>
+          <span class="font-light"> Erazo</span>
+        </h1>
+
+        <!-- Roles badge carousel -->
+        <div class="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
+          <span class="hero-badge text-xs font-medium text-white px-3 py-1 rounded-full">Asistente Administrativa</span>
+          <span class="bg-sky-soft/40 text-navy text-xs font-medium px-3 py-1 rounded-full border border-sky-soft">Recepcionista</span>
+          <span class="bg-blush/60 text-navy text-xs font-medium px-3 py-1 rounded-full border border-blush">Diseño Gráfico &amp; Marketing</span>
+          <span class="bg-parchment text-slate text-xs font-medium px-3 py-1 rounded-full border border-gold-light">Serv. Generales</span>
+        </div>
+
+        <!-- Summary -->
+        <p class="text-slate text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
+          Profesional proactiva, organizada y responsable con más de <strong class="text-gold-dark">13 años</strong> de trayectoria laboral. Comprometida con la excelencia, el aprendizaje continuo y el buen trato a las personas.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+          <a href="#experiencia" class="btn-gold px-7 py-3 font-medium inline-flex items-center gap-2">
+            <i class="fas fa-briefcase text-sm"></i> Ver mi experiencia
+          </a>
+          <a href="https://wa.me/51926400997?text=Hola%20Nelda%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte."
+             target="_blank" rel="noopener"
+             class="btn-outline px-7 py-3 font-medium inline-flex items-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Contáctame por WhatsApp
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-8 justify-center lg:justify-start mt-10 pt-8 border-t border-gold-light/60">
+          <div class="text-center">
+            <div class="font-display text-3xl text-gold font-semibold">13+</div>
+            <div class="text-xs text-slate mt-0.5">Años de experiencia</div>
+          </div>
+          <div class="w-px bg-gold-light/60"></div>
+          <div class="text-center">
+            <div class="font-display text-3xl text-gold font-semibold">5</div>
+            <div class="text-xs text-slate mt-0.5">Certificaciones</div>
+          </div>
+          <div class="w-px bg-gold-light/60"></div>
+          <div class="text-center">
+            <div class="font-display text-3xl text-gold font-semibold">4</div>
+            <div class="text-xs text-slate mt-0.5">Empresas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="flex-shrink-0 reveal">
+        <div class="relative">
+          <!-- Decorative rings -->
+          <div class="absolute -inset-4 rounded-full border border-gold-light/40 pointer-events-none"></div>
+          <div class="absolute -inset-8 rounded-full border border-gold-light/20 pointer-events-none"></div>
+          <!-- Frame -->
+          <div class="photo-frame w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden flex items-center justify-center">
+            <!--
+              ══════════════════════════════════════════════════
+              FOTO: Reemplaza la imagen de abajo con tu foto.
+              Solo cambia la ruta del src por la de tu imagen.
+              Ejemplo: src="mi-foto.jpg"
+              ══════════════════════════════════════════════════
+            -->
+            <img id="profile-photo"
+                 src="https://png.pngtree.com/png-clipart/20240517/original/pngtree-female-auditor-avatar-png-image_15115283.png"
+                 alt="Nelda Rojas Erazo – Foto profesional"
+                 class="w-full h-full object-cover" />
+          </div>
+          <!-- Badge -->
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 hero-badge text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+            ✦ Disponible para trabajar
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ SOBRE MÍ ════════════════════════════ -->
+<section id="sobre" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label">Conóceme</p>
+      <h2 class="section-title text-4xl sm:text-5xl mt-2">Sobre Mí</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="sobre-card p-8 sm:p-10 reveal">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <!-- Icon col -->
+        <div class="flex-shrink-0 mx-auto md:mx-0">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold-light to-gold flex items-center justify-center text-white text-3xl shadow-lg">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+        <!-- Text -->
+        <div>
+          <h3 class="font-display text-2xl sm:text-3xl text-navy mb-4 font-semibold">
+            Profesional comprometida con cada tarea
+          </h3>
+          <p class="text-slate leading-relaxed mb-4">
+            Soy <strong class="text-gold-dark">Nelda Rojas Erazo</strong>, una profesional versátil con amplia experiencia en administración, recepción, servicios generales, diseño gráfico y marketing digital. A lo largo de más de 13 años de carrera he desarrollado una sólida capacidad para adaptarme a distintos entornos laborales con proactividad y responsabilidad.
+          </p>
+          <p class="text-slate leading-relaxed mb-6">
+            Me caracterizo por mis <strong class="text-navy">excelentes relaciones interpersonales</strong>, mi vocación de servicio al cliente y mi compromiso con la puntualidad y el trabajo en equipo. Cuento con formación en diseño gráfico y marketing digital que me permite aportar valor también en la comunicación visual y la gestión de redes sociales.
+          </p>
+          <!-- Traits -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="text-center p-3 rounded-xl bg-parchment/70">
+              <i class="fas fa-bolt text-gold text-lg mb-1"></i>
+              <p class="text-xs font-medium text-navy">Proactiva</p>
+            </div>
+            <div class="text-center p-3 rounded-xl bg-parchment/70">
+              <i class="fas fa-layer-group text-gold text-lg mb-1"></i>
+              <p class="text-xs font-medium text-navy">Organizada</p>
+            </div>
+            <div class="text-center p-3 rounded-xl bg-parchment/70">
+              <i class="fas fa-handshake text-gold text-lg mb-1"></i>
+              <p class="text-xs font-medium text-navy">Servicial</p>
+            </div>
+            <div class="text-center p-3 rounded-xl bg-parchment/70">
+              <i class="fas fa-clock text-gold text-lg mb-1"></i>
+              <p class="text-xs font-medium text-navy">Puntual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ EXPERIENCIA LABORAL ═══════════════════════ -->
+<section id="experiencia" class="py-20 bg-cream">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label">Trayectoria</p>
+      <h2 class="section-title text-4xl sm:text-5xl mt-2">Experiencia Laboral</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical line (hidden on mobile) -->
+      <div class="hidden sm:block absolute left-6 top-6 bottom-6 timeline-line"></div>
+
+      <div class="flex flex-col gap-8">
+
+        <!-- Job 1 -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-gold/15 text-gold-dark px-2.5 py-0.5 rounded-full mb-2 inline-block">Enero 2026 – Actual</span>
+                <h3 class="font-semibold text-navy text-lg">Asistente Administrativa</h3>
+                <p class="text-gold-dark font-medium text-sm">Lavandería</p>
+              </div>
+              <i class="fas fa-tshirt text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Gestión administrativa del negocio: registro de pedidos, control de ingresos y egresos, atención al cliente, coordinación de entregas y seguimiento de prendas. Manejo de documentación interna, organización del archivo y soporte en la operación diaria del servicio de lavandería.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 2 - Markham -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-gold/15 text-gold-dark px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
+                <h3 class="font-semibold text-navy text-lg">Profesora de Computación</h3>
+                <p class="text-gold-dark font-medium text-sm">Colegio Markham</p>
+              </div>
+              <i class="fas fa-laptop text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Enseñanza de herramientas informáticas y ofimáticas a estudiantes. Planificación y ejecución de sesiones de aprendizaje, desarrollo de competencias digitales, manejo de aula y seguimiento del progreso académico de los alumnos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 3 - Baby Kinder -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-sky-soft/30 text-navy px-2.5 py-0.5 rounded-full mb-2 inline-block">2024</span>
+                <h3 class="font-semibold text-navy text-lg">Asistente Administrativa</h3>
+                <p class="text-gold-dark font-medium text-sm">I.E.P Baby Kinder</p>
+              </div>
+              <i class="fas fa-school text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Gestión documental, atención a padres de familia, apoyo en coordinación pedagógica y administrativa. Manejo de archivo físico y digital, elaboración de comunicados y soporte al director.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 4 - Merino Recepcionista -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-sky-soft/30 text-navy px-2.5 py-0.5 rounded-full mb-2 inline-block">2019 – 2020</span>
+                <h3 class="font-semibold text-navy text-lg">Recepcionista y Asistente Administrativa</h3>
+                <p class="text-gold-dark font-medium text-sm">Merino S.A.C.</p>
+              </div>
+              <i class="fas fa-concierge-bell text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Atención y orientación a clientes en recepción, gestión de llamadas entrantes, coordinación de agendas, archivo y organización de documentación interna. Soporte administrativo al equipo directivo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 5 - Merino Servicios Generales -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-blush/60 text-navy px-2.5 py-0.5 rounded-full mb-2 inline-block">2013 – 2019</span>
+                <h3 class="font-semibold text-navy text-lg">Asistente de Servicios Generales</h3>
+                <p class="text-gold-dark font-medium text-sm">Merino S.A.C.</p>
+              </div>
+              <i class="fas fa-broom text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Supervisión y ejecución de labores de limpieza y mantenimiento en instalaciones. Organización de insumos, coordinación con proveedores y cumplimiento de protocolos de higiene y seguridad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 6 - Merino Mantenimiento -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal">
+          <div class="hidden sm:flex flex-col items-center pt-5">
+            <div class="timeline-dot z-10"></div>
+          </div>
+          <div class="exp-card flex-1 p-6 sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-medium bg-parchment text-slate px-2.5 py-0.5 rounded-full mb-2 inline-block">2010 – 2013</span>
+                <h3 class="font-semibold text-navy text-lg">Asistente de Mantenimiento</h3>
+                <p class="text-gold-dark font-medium text-sm">Merino S.A.C.</p>
+              </div>
+              <i class="fas fa-tools text-gold-light text-2xl mt-1"></i>
+            </div>
+            <p class="text-slate text-sm leading-relaxed">
+              Apoyo en tareas de mantenimiento preventivo y correctivo de espacios. Gestión de requerimientos de insumos, registro de actividades realizadas y coordinación con el área de infraestructura.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════ EDUCACIÓN ══════════════════════════════ -->
+<section id="educacion" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label">Formación académica</p>
+      <h2 class="section-title text-4xl sm:text-5xl mt-2">Educación</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="edu-card p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-light to-gold flex items-center justify-center text-white mb-4">
+          <i class="fas fa-graduation-cap text-lg"></i>
+        </div>
+        <span class="text-xs font-medium text-gold-dark bg-gold/10 px-2 py-0.5 rounded-full">2021 – 2022</span>
+        <h3 class="font-semibold text-navy mt-2 mb-1">Educación Superior</h3>
+        <p class="text-sm text-gold-dark font-medium mb-2">Instituto Superior<br/>María Elena Moyano</p>
+        <p class="text-xs text-slate">Villa El Salvador, Lima – Perú</p>
+      </div>
+
+      <div class="edu-card p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-soft to-navy flex items-center justify-center text-white mb-4">
+          <i class="fas fa-school text-lg"></i>
+        </div>
+        <span class="text-xs font-medium text-navy bg-sky-soft/30 px-2 py-0.5 rounded-full">Completada</span>
+        <h3 class="font-semibold text-navy mt-2 mb-1">Educación Secundaria</h3>
+        <p class="text-sm text-slate leading-relaxed mt-2">Estudios secundarios completados satisfactoriamente.</p>
+      </div>
+
+      <div class="edu-card p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blush to-gold-light flex items-center justify-center text-navy mb-4">
+          <i class="fas fa-book-open text-lg"></i>
+        </div>
+        <span class="text-xs font-medium text-navy bg-blush/60 px-2 py-0.5 rounded-full">Completada</span>
+        <h3 class="font-semibold text-navy mt-2 mb-1">Educación Primaria</h3>
+        <p class="text-sm text-slate leading-relaxed mt-2">Base educativa sólida con valores de disciplina y esfuerzo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CURSOS & CERTIFICACIONES ══════════════════ -->
+<section id="cursos" class="py-20 bg-cream">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label">Formación Continua</p>
+      <h2 class="section-title text-4xl sm:text-5xl mt-2">Cursos y Certificaciones</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <div class="course-card p-5 reveal-left flex items-start gap-4">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-white flex-shrink-0">
+          <i class="fas fa-palette text-base"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-semibold text-navy text-sm">Diseño Gráfico Profesional</h3>
+            <span class="text-xs bg-gold/15 text-gold-dark px-1.5 py-0.5 rounded">Experto</span>
+          </div>
+          <p class="text-xs text-slate">Certificación profesional en diseño gráfico. Manejo de herramientas digitales de edición, composición visual e identidad de marca.</p>
+        </div>
+      </div>
+
+      <div class="course-card p-5 reveal-right flex items-start gap-4">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-sky-soft to-navy flex items-center justify-center text-white flex-shrink-0">
+          <i class="fas fa-bullhorn text-base"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-semibold text-navy text-sm">Marketing Digital</h3>
+            <span class="text-xs bg-sky-soft/30 text-navy px-1.5 py-0.5 rounded">Experto</span>
+          </div>
+          <p class="text-xs text-slate">Estrategias digitales, gestión de redes sociales, contenido digital y posicionamiento de marca en medios online.</p>
+        </div>
+      </div>
+
+      <div class="course-card p-5 reveal-left flex items-start gap-4">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-blush to-gold-light flex items-center justify-center text-navy flex-shrink-0">
+          <i class="fas fa-file-alt text-base"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-semibold text-navy text-sm">Asistente Administrativo</h3>
+            <span class="text-xs bg-blush/60 text-navy px-1.5 py-0.5 rounded">CENAP</span>
+          </div>
+          <p class="text-xs text-slate">Gestión documental, redacción de documentos oficiales, manejo de agenda ejecutiva y atención al cliente interno y externo.</p>
+        </div>
+      </div>
+
+      <div class="course-card p-5 reveal-right flex items-start gap-4">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-parchment to-gold-light flex items-center justify-center text-navy flex-shrink-0">
+          <i class="fas fa-laptop text-base"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-semibold text-navy text-sm">Operador Informático</h3>
+            <span class="text-xs bg-parchment text-slate px-1.5 py-0.5 rounded">Certificado</span>
+          </div>
+          <p class="text-xs text-slate">Manejo de herramientas ofimáticas, sistemas operativos, internet y aplicaciones de productividad para el entorno laboral.</p>
+        </div>
+      </div>
+
+      <div class="course-card p-5 reveal sm:col-span-2 md:col-span-1 flex items-start gap-4">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-light to-blush flex items-center justify-center text-navy flex-shrink-0">
+          <i class="fas fa-child text-base"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-semibold text-navy text-sm">Auxiliar en Educación Inicial</h3>
+            <span class="text-xs bg-parchment text-slate px-1.5 py-0.5 rounded">Certificado</span>
+          </div>
+          <p class="text-xs text-slate">Apoyo pedagógico en aulas de nivel inicial, estimulación temprana, relación con familias y cuidado del desarrollo infantil.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ HABILIDADES ══════════════════════════════ -->
+<section id="habilidades" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label">Competencias</p>
+      <h2 class="section-title text-4xl sm:text-5xl mt-2">Habilidades</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 reveal">
+
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-headset text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Atención al cliente</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-concierge-bell text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Recepción</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-tasks text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Organización y gestión</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-users text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Trabajo en equipo</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-palette text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Diseño Gráfico</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-chart-line text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Marketing Digital</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-file-excel text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Microsoft Office</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fab fa-facebook text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Redes Sociales</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-broom text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Limpieza profesional</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-folder-open text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Gestión de documentos</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-clock text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Puntualidad</span>
+      </div>
+      <div class="skill-pill flex items-center gap-2.5 px-4 py-2.5 cursor-default">
+        <i class="fas fa-star text-gold skill-icon text-sm"></i>
+        <span class="text-sm font-medium text-slate">Responsabilidad</span>
+      </div>
+
+    </div>
+
+    <!-- Ofimática bar -->
+    <div class="mt-14 max-w-2xl mx-auto reveal">
+      <h3 class="text-center font-display text-2xl text-navy mb-8 font-semibold">Nivel de herramientas</h3>
+      <div class="space-y-5">
+        <div>
+          <div class="flex justify-between text-sm font-medium text-slate mb-1.5">
+            <span><i class="fas fa-file-word text-gold mr-2"></i>Microsoft Word</span><span class="text-gold-dark">Avanzado</span>
+          </div>
+          <div class="h-2 bg-parchment rounded-full overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-gold to-gold-dark w-[88%] transition-all duration-1000"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium text-slate mb-1.5">
+            <span><i class="fas fa-file-excel text-gold mr-2"></i>Microsoft Excel</span><span class="text-gold-dark">Intermedio</span>
+          </div>
+          <div class="h-2 bg-parchment rounded-full overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-gold to-gold-dark w-[72%] transition-all duration-1000"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium text-slate mb-1.5">
+            <span><i class="fas fa-file-powerpoint text-gold mr-2"></i>PowerPoint</span><span class="text-gold-dark">Avanzado</span>
+          </div>
+          <div class="h-2 bg-parchment rounded-full overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-gold to-gold-dark w-[85%] transition-all duration-1000"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium text-slate mb-1.5">
+            <span><i class="fab fa-facebook text-gold mr-2"></i>Facebook / Redes Sociales</span><span class="text-gold-dark">Avanzado</span>
+          </div>
+          <div class="h-2 bg-parchment rounded-full overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-gold to-gold-dark w-[82%] transition-all duration-1000"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════ CONTACTO ═══════════════════════════════ -->
+<section id="contacto" class="py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 reveal">
+      <p class="section-label" style="color:#E8D5B0">Hablemos</p>
+      <h2 class="font-display text-4xl sm:text-5xl text-white mt-2 font-semibold">Contacto</h2>
+      <div class="w-12 h-0.5 mx-auto mt-3" style="background:linear-gradient(90deg,#C9A96E,#E8D5B0)"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- Contact info -->
+      <div class="reveal-left space-y-5">
+        <p class="text-blue-100 leading-relaxed mb-6">
+          Estoy disponible para nuevas oportunidades laborales. Escríbeme y con gusto conversamos sobre cómo puedo aportar a tu equipo.
+        </p>
+
+        <a href="https://wa.me/51926400997?text=Hola%20Nelda%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte."
+           target="_blank" rel="noopener"
+           class="flex items-center gap-4 p-4 rounded-xl bg-white/10 border border-white/15 hover:bg-white/15 transition-colors group">
+          <div class="w-11 h-11 rounded-lg bg-green-500 flex items-center justify-center text-white text-lg flex-shrink-0">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+            <p class="text-xs text-blue-200 mb-0.5">WhatsApp</p>
+            <p class="text-white font-medium group-hover:text-gold-light transition-colors">+51 926 400 997</p>
+          </div>
+        </a>
+
+        <a href="mailto:neldarojaserazo310@gmail.com"
+           class="flex items-center gap-4 p-4 rounded-xl bg-white/10 border border-white/15 hover:bg-white/15 transition-colors group">
+          <div class="w-11 h-11 rounded-lg bg-gold flex items-center justify-center text-white text-lg flex-shrink-0">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <p class="text-xs text-blue-200 mb-0.5">Correo electrónico</p>
+            <p class="text-white font-medium group-hover:text-gold-light transition-colors text-sm">neldarojaserazo310@gmail.com</p>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-4 p-4 rounded-xl bg-white/10 border border-white/15">
+          <div class="w-11 h-11 rounded-lg bg-white/20 flex items-center justify-center text-white text-lg flex-shrink-0">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <p class="text-xs text-blue-200 mb-0.5">Ubicación</p>
+            <p class="text-white font-medium">Villa El Salvador, Lima – Perú</p>
+          </div>
+        </div>
+
+        <a href="https://github.com/NEL777130613?tab=repositories"
+           target="_blank" rel="noopener"
+           class="flex items-center gap-4 p-4 rounded-xl bg-white/10 border border-white/15 hover:bg-white/15 transition-colors group">
+          <div class="w-11 h-11 rounded-lg bg-white/20 flex items-center justify-center text-white text-lg flex-shrink-0">
+            <i class="fab fa-github"></i>
+          </div>
+          <div>
+            <p class="text-xs text-blue-200 mb-0.5">GitHub</p>
+            <p class="text-white font-medium group-hover:text-gold-light transition-colors">NEL777130613</p>
+          </div>
+        </a>
+
+        <!-- Big WA button -->
+        <a href="https://wa.me/51926400997?text=Hola%20Nelda%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte."
+           target="_blank" rel="noopener"
+           class="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-medium text-white text-base mt-2"
+           style="background:linear-gradient(135deg,#25D366,#128C7E); box-shadow:0 6px 28px rgba(37,211,102,.4);">
+          <i class="fab fa-whatsapp text-xl"></i> Enviar mensaje por WhatsApp
+        </a>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal-right">
+        <form id="contact-form" class="space-y-4" onsubmit="handleSubmit(event)">
+          <div>
+            <label class="text-blue-200 text-xs font-medium mb-1.5 block">Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required
+                   class="contact-input w-full px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="text-blue-200 text-xs font-medium mb-1.5 block">Correo electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com" required
+                   class="contact-input w-full px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="text-blue-200 text-xs font-medium mb-1.5 block">Asunto</label>
+            <input type="text" placeholder="Ej. Oportunidad laboral" required
+                   class="contact-input w-full px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="text-blue-200 text-xs font-medium mb-1.5 block">Mensaje</label>
+            <textarea rows="4" placeholder="Cuéntame sobre la oportunidad..." required
+                      class="contact-input w-full px-4 py-3 text-sm resize-none"></textarea>
+          </div>
+          <button type="submit"
+                  class="btn-gold w-full py-3.5 font-medium flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane text-sm"></i> Enviar mensaje
+          </button>
+        </form>
+        <p id="form-success" class="hidden mt-4 text-center text-green-400 text-sm font-medium">
+          ✓ ¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FOOTER ══════════════════════════════════ -->
+<footer class="bg-navy py-8 border-t border-white/10">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="font-display text-lg text-white font-semibold">Nelda</span>
+      <span class="font-display text-lg text-gold font-light">Rojas Erazo</span>
+    </div>
+    <p class="text-blue-200 text-xs text-center">
+      © 2024 Nelda Rojas Erazo · Villa El Salvador, Lima – Perú
+    </p>
+    <a href="#hero" class="text-gold text-xs hover:text-gold-light transition-colors flex items-center gap-1">
+      <i class="fas fa-arrow-up text-xs"></i> Volver arriba
+    </a>
+  </div>
+</footer>
+
+<!-- ════════════════════ FLOATING WHATSAPP BUTTON ════════════════════════ -->
+<a href="https://wa.me/51926400997?text=Hola%20Nelda%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte."
+   target="_blank" rel="noopener"
+   class="wa-float fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl z-50"
+   title="Escríbeme por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Script propio (al final del body) -->
+<script src="main.js"></script>
+
+</body>
+</html>
